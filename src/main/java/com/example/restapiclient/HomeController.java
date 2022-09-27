@@ -35,7 +35,7 @@ public class HomeController {
     @PostMapping("/findFlag")
     public ResponseEntity<Flag> findFlag(@RequestBody FlagRequest flagRequest){
         System.out.println("findFlag called");
-        flagRequest.setRequest(" At P3. " + flagRequest.getRequest());
+        flagRequest.setRequest(" Camellalicious " + flagRequest.getRequest());
         Flag flag = apiService.requestFlag(flagRequest);
         return new ResponseEntity<>(flag, HttpStatus.OK);
     }
